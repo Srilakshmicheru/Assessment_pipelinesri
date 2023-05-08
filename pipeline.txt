@@ -1,9 +1,7 @@
-#//pipeline in Jenkins with the stages of CB(Citizens Bank) end to end
-#//implementation of project.
 pipeline {
     agent none
     stages {
-	 stage('bitbucket') {
+	stage('bitbucket') {
             steps {
                 script {
                     echo "application code will stored here..."
