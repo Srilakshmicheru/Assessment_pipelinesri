@@ -1,0 +1,71 @@
+//pipeline in Jenkins with the stages of CB(Citizens Bank) end to end
+implementation of project.
+pipeline {
+    agent none
+    stages {
+	 stage('bitbucket') {
+            steps {
+                script {
+                    echo "application code will stored here..."
+                }
+            }
+        }
+        stage('maven') {
+            steps {
+                script {
+                    echo "application package will be done..."
+                }
+            }
+        }
+        stage('build') {
+            steps {
+                script {
+                    echo "Building the application..."
+                }
+            }
+        }
+        stage('test') {
+            steps {
+                script {
+                    echo "Testing the application..."
+                }
+            }
+        }
+        stage('sonarqube') {
+            steps {
+                script {
+                    echo "application will be tested for quality..."
+                }
+            }
+        }
+        
+        stage('convert') {
+            steps {
+                script {
+                    echo "convert the file"
+                }
+            }
+        }
+	 stage('nexus') {
+            steps {
+                script {
+                    echo "build an nexus image for the code..."
+                }
+            }
+        }
+         stage('push') {
+            steps {
+                script {
+                    echo "convert push"
+                }
+            }
+        }
+        stage('deploy') {
+            steps {
+                script {
+                    echo "Deploying the application..."
+                }
+            }
+        }
+    }
+}
