@@ -1,5 +1,5 @@
-//pipeline in Jenkins with the stages of CB(Citizens Bank) end to end
-implementation of project.
+#//pipeline in Jenkins with the stages of CB(Citizens Bank) end to end
+#//implementation of project.
 pipeline {
     agent none
     stages {
@@ -37,8 +37,7 @@ pipeline {
                     echo "application will be tested for quality..."
                 }
             }
-        }
-        
+        }        
         stage('convert') {
             steps {
                 script {
@@ -46,14 +45,14 @@ pipeline {
                 }
             }
         }
-	 stage('nexus') {
+	  stage('nexus') {
             steps {
                 script {
                     echo "build an nexus image for the code..."
                 }
             }
         }
-         stage('push') {
+        stage('push') {
             steps {
                 script {
                     echo "convert push"
